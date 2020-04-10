@@ -1,0 +1,751 @@
+* {                                  /* звездочка значит для всех элементов*/
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    padding-top: 44px;               /* внутренний отступ сверху 44px для всего содержимого body */
+
+}
+
+.container {
+    /* border: 1px solid red; */
+    max-width: 1200px;              /*максимальная ширина*/
+    margin: auto;                    /*всегда по центру*/
+}
+
+.container-gradient {
+    margin: auto;  
+    padding-bottom: 60px;
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%);
+}
+
+/* Общий класс для input-элементов поиска */
+.input{
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 2px;
+    font-size: 16px;
+    line-height: 24px;
+
+    padding: 8px;
+    padding-left: 35px;    /*Отступ слева внутри инпута */
+
+    background-repeat: no-repeat;               /* толкько один экземпляр*/
+    background-position: left 11px center;           /* расположение: прижать влево (и отступить 11px), выровнить по центру*/
+}
+
+/*******************************************Header********************************************/
+.header {
+    /* border: 1px solid orangered; */
+    display: flex;                  /* выстоить ВСЕ элементы в блоке header в строку!*/
+    align-items: center;            /*выровнить элементы по вертикале по центру*/
+    justify-content: space-between; /* раскидать все элементы на равное удаление друг от друга */
+    
+    /* margin-top: 44px; */              /*внешний отступ сверху 44px для блока header */
+    margin-bottom: 40px;
+}
+
+.search-address {
+    height: 40px;
+    /* вместо width: 690px; ставим flex:0.8; - элемент будет занимать 80% от свободного места */
+    flex:0.8;
+    /* Вставляем иконку внутрь инпут */
+    background-image: url(../img/home.svg);     /* Сама картинка*/
+    /* background-repeat: no-repeat;               толкько один экземпляр */
+    /* background-position: left 11px center;           расположение: прижать влево (и отступить 11px), выровнить по центру */ 
+    /* padding-left: 35px;    Отступ слева внутри инпута */
+
+}
+
+.buttons {
+    display: flex;                  /* выстоить ВСЕ элементы в блоке header в строку!*/
+    align-items: center;            /*выровнить элементы по вертикале по центру*/
+}
+
+/*  Классы кнопок Header */
+.button {
+
+    display: flex;                  /* выстоить ВСЕ элементы в блоке header в строку!*/
+    align-items: center;            /*выровнить элементы по вертикале по центру*/
+
+    padding: 8px 16px;          /*внутренние отступы*/
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015);
+    border-radius: 2px;
+    color: #595959;         /*цвет текста в кнопке*/
+    font-size: 16px;
+    line-height: 24px;
+
+    /* align-items: center;            выровнить элементы по вертикале по центру */
+}
+
+.button-primary {
+    background: #1890FF;            /*фон кнопки*/
+    border: 1px solid #1890FF;      /*обводка и цвет*/
+    border-radius: 2px;               /*радиус скругления*/
+    color: #FFFFFF;                 /*цвет текста внутри кнопки*/
+
+    margin-right: 10px;             /*!!!!!!!!!!!!!!!!!!*/
+}
+
+.button-icon {
+    margin-right: 6px;
+    /* vertical-align: middle; */
+} 
+
+.button-text {
+    vertical-align: middle;
+}
+
+.button-card-text {
+    margin-right: 10px;
+}
+
+/*******************************************Header end********************************************/
+
+
+/*******************************************Promo********************************************/
+.promo {
+    /* border: 1px solid #1890FF; */
+    box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1); /*тень*/
+    /*background: #FFF1B8; */   /*Просто фоновый цвет*/
+    background: #FFF1B8 url(../img/promo-img_.png) no-repeat top -100px right -247px / 924px;
+    border-radius: 10px;       /*скругление*/
+    padding: 68px 70px 68px 70px;
+    margin-bottom: 56px;
+}
+
+.promo-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 39px;
+    line-height: 46px;
+    color: #302C34;
+}
+
+.promo-text {
+    max-width: 540px;
+    font-size: 24px;
+    line-height: 28px;
+    color: #302C34;
+}
+
+/*******************************************Promo end********************************************/
+
+
+/*******************************************Секция ресторанов********************************************/
+
+.restaurant-header {
+    display: flex;          /*все внутренние блоки и элементы в ряд!*/
+    align-items: center;    /*выравнивание по вертикали по центру*/
+    /* justify-content: space-between;*/ /*Разнесли по сторонам */
+    margin-bottom: 44px;
+}
+
+.restaurant-title {
+    font-size: 36px;
+    line-height: 42px;
+    color: #000000;
+    margin: 0px;
+    margin-right: 30px;
+
+}
+.search-restaurants {
+    height: 40px;
+    width: 300px;
+    /* Вставляем иконку внутрь инпут */
+    background-image: url(../img/search.svg);     /* Сама картинка*/
+    margin-left: auto;
+}
+
+/******************cards******************/ 
+.cards {
+    display: flex;                  /* выстоить ВСЕ элементы в блоке header в строку!*/
+    justify-content: space-between; /* раскидать все элементы на равное удаление друг от друга */
+    flex-wrap: wrap;                /*переносим вниз, если не все элементы не вмещаются в контейнер по ширине*/
+    align-items: flex-start;            /*выровнить элементы по вертикале по центру*/
+
+}
+
+
+.card {
+    /* border: 1px solid #1890FF;    */
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    /* добавлено для адаптива - будут занимать 30% */
+     flex-basis: 32%;  
+     /* каждый элемент занимает 30% контейнера - итого 3 шт может поместиться в ряд */
+
+     text-decoration: none;
+}
+
+.card-image {
+    /* width: 384px; */
+    height: 250px;
+    object-fit: cover;  /*это свойство, если будет картинка с другими размерами (сама обрезается и рассчитывается)*/
+    width: 100%;
+}
+
+.card-text {
+    padding-top: 20px;
+    padding-bottom: 35px;
+    padding-left: 23px;
+    padding-right: 23px;
+}
+
+.card-header {
+    display: flex;                  /* выстоить ВСЕ элементы в блоке header в строку!*/
+    align-items: center;            /*выровнить элементы по вертикале по центру*/
+    justify-content: space-between; /* раскидать все элементы на равное удаление друг от друга */
+}
+
+.card-title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.regular {
+    font-weight: 400; 
+
+}
+
+
+.card-tag {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: #ffffff;
+    background: #000;
+    border-radius: 2px;
+    padding: 1px 8px;
+    width: 60px;
+}
+
+.card-info {
+    display: flex;                  /* выстоить ВСЕ элементы в блоке header в строку!*/
+    align-items: center;            /*выровнить элементы по вертикале по центру*/
+    flex-wrap: wrap;                /*Если текст элементе блока не помещается, он спрыгиывает на новую строчку*/
+
+}
+
+.rating {
+    margin-right: 26px;
+
+    color: #FFC107;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.price, 
+.catygory {
+    color: #8C8C8C;
+    font-size: 18px;
+    line-height: 32px;
+
+    /* Текст не раскрывается полностью если не вмещается: */
+    text-overflow: ellipsis;
+    overflow: hidden;  /*все что вылазит за пределы блока скрывается*/
+    white-space: nowrap;    /*запрет переноса строк*/
+    max-width: 150px;
+}
+
+.price {
+    margin-right: 10px;
+}
+
+.price:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #8C8C8C;
+    display: inline-block; /* делаем строчно-блочным*/
+    vertical-align: middle; /*посередине*/
+    margin-left: 10px;
+
+}
+
+.card-description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #8C8C8C;
+}
+
+.card-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.card-price-bord {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+    margin-left: 32px;
+}
+
+/******************cards end******************/ 
+/*******************************************Секция ресторанов end********************************************/
+
+
+/*******************************************Секция footer end********************************************/
+footer {
+        /* border: 1px solid orangered; */
+        display: flex;                  /* выстоить ВСЕ элементы в блоке header в строку!*/
+        align-items: center;            /*выровнить элементы по вертикале по центру*/
+        /* justify-content: space-between; */
+         /* раскидать все элементы на равное удаление друг от друга */
+         margin-top: 60px;
+         margin-bottom: 60px;
+}
+
+.footer-links {
+    width: 420px;
+    margin-left: 35px;
+
+    display: flex;                  /* выстоить ВСЕ элементы в блоке header в строку!*/
+    align-items: center;            /*выровнить элементы по вертикале по центру*/
+    justify-content: space-between;
+}
+
+.footer-link {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 21px;
+    color: #595959;
+    text-decoration: none;
+     /* margin-left: 15px; */ 
+}
+
+/*для всех элеменитов, кроме последнего*/
+.footer-link:not(:last-child) {
+    margin-right: 15px;
+}
+
+
+.social-links {
+    width: 127px;
+    margin-left: auto; 
+    display: flex;                  /* выстоить ВСЕ элементы в блоке header в строку!*/
+    align-items: center;            /*выровнить элементы по вертикале по центру*/
+    justify-content: space-between;
+}
+
+/* .social-link {  
+} */
+
+
+/*******************************************Секция footer end********************************************/
+
+/*******************************************Модальное окно********************************************/
+
+
+.modal {
+    /*положение блока фиксированное, не прокручивалось */
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /*! Чтобы окно мадальное окно modal-dialog встало по центру делаем у родителя display: flex; а у modal-dialog   margin: auto;*/
+    /* display: flex; */
+    display: none;
+}
+
+.is-open {
+    display: flex;
+}
+
+
+.modal-dialog {
+    /* вместо ширины width: 780px; лучше использовать max-width: 780px; и width: 95%;*/
+    max-width: 780px;
+    width: 95%;
+    /* min-height: 552px; */
+    background: #FFFFFF;
+    border-radius: 5px;
+    margin: auto;
+    padding: 40px 45px;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    /*Отодвигаем вниз блок  с rows  */
+    margin-bottom: 45px;
+}
+
+.close {
+    font-size: 36px;
+    border:none;
+    /* Устанавливаеем прозрачный фон.Наследуем значение родителя. */
+    background-color: transparent;
+}
+
+.modal-body {
+     margin-bottom: 52px;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 36px;
+    line-height: 42px;
+    color: #000000;
+}
+
+
+.food-row {
+    display: flex;
+    /* align-items: center; */
+    align-items: flex-start;
+
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 15px;    
+}
+
+.food-name {
+    font-size: 18px;
+    line-height: 32px;
+    color: #000000;
+}
+
+.food-price {
+    margin-left: auto;
+    margin-right: 47px;
+
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+    color: #000000;
+
+}
+
+.food-counter{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.counter-button {
+    width: 39px;
+    height: 32px;
+    background: #FFFFFF;
+    border: 1px solid #40A9FF;
+    box-sizing: border-box;
+    border-radius: 2px;
+
+    font-size: 14px;
+    line-height: 22px;
+    color: #40A9FF;
+
+}
+
+.counter {
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.modal-footer-sum {
+    background: #262626;
+    border-radius: 5px;
+    color:#ffffff;
+    padding: 15px 20px;
+}
+/*******************************************Модальное окно end********************************************/
+
+
+
+
+
+/*******************************************Адаптив под разные устройства********************************************/
+/* примеять стили естли выполняется условия в скобках */
+@media (max-width: 1366px) {
+    .container {
+        max-width: 960px;
+    }
+    .promo {
+        background-position: center right -300px;
+        background-size: 818px;
+    }
+
+    .rating {
+        margin-right: 15px;
+        font-size: 16px;
+    }
+
+    .catygory, .price {
+        font-size: 16px;
+    }
+}
+
+/* для экрана 992px */
+@media (max-width: 992px) {
+
+    .container {
+        max-width: 750px;
+    }
+
+    .promo {
+        padding: 50px;
+
+        background-size: 500px;
+        background-position: center right -200px;
+    }
+
+    .promo-text {
+        font-size: 18px;
+        max-width: 400px;
+    } 
+    
+    .card {
+        flex-basis: 49%; /* Каждая из карточе занимает половину ширины ряда*/
+    }
+
+    .footer-link {
+        font-size: 14px;
+    }
+}
+
+
+/* для экрана 768px */
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 560px;
+    }
+
+    /* Делаем перенос элементов если они не помещаются в строку, причем задаем элементу order для  того чтобы именно он был "последним" и переносился */
+    .search-address {
+        margin-top: 15px; /*отлепляем его от элементов 1 строки*/
+        order:5;
+        flex: 1;    /*растягиваем на всю ширину*/
+        min-width: 300px; 
+    }
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .promo {
+        padding: 40px;
+
+        background-size: 400px;
+        background-position: bottom 50px right -200px;
+    }
+    
+    .promo-title {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+
+    .promo-text {
+        margin-top: 0;
+    }
+
+
+    .restaurant-title {
+        font-size: 30px;
+    }
+
+    .card-info {
+        /* Перенос */
+        flex-wrap: wrap; 
+    }
+
+    .card .rating {
+        flex-basis: 100%;
+    }
+
+    /* .cards {
+        flex-wrap: wrap; 
+    } */
+
+    .card-title {
+        font-size: 28px;
+    }
+
+    .card {
+        flex-basis: 100%; /* Каждая из карточе занимает половину ширины ряда*/
+    }
+
+    .card-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .footer {
+        flex-wrap: wrap; 
+        margin-top: 30px; 
+        margin-bottom: 30px; 
+    }
+
+    .footer-links {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+        order:0;
+        width: 100%;
+    }
+
+    .footer-logo {
+        order:1;
+    }
+
+    .social-links {
+        order:2;
+    }
+
+}
+
+
+/* для экрана 578px */
+@media (max-width: 578px) {
+    .container {
+        max-width: 90%;
+    }
+
+    /* .button {
+        width: 100px;
+    } */
+
+    /* Делаем перенос элементов если они не помещаются в строку, причем задаем элементу order для  того чтобы именно он был "последним" и переносился */
+    .search-address {
+        margin-top: 15px; /*отлепляем его от элементов 1 строки*/
+        order:5;
+        flex: 1;    /*растягиваем на всю ширину*/
+    }
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .promo {
+        background-image: none;
+    }
+
+    .promo-title {
+        margin-bottom: 10px;
+    }
+
+    .restaurant-header {
+        flex-wrap: wrap;
+    }
+
+    .restaurant-title {
+        font-size: 40px;
+        margin-right: 50px;
+    }
+
+    .search-restaurants { 
+        margin-top: 15px; /*отлепляем его от элементов 1 строки*/
+        flex: 1;    /*растягиваем на всю ширину*/
+    }
+
+    .card-image {
+        width: 100%;
+    }
+
+    .footer {
+        flex-wrap: wrap; 
+        margin-top: 30px; 
+        margin-bottom: 30px; 
+    }
+
+    .footer-links {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+        order:0;
+        width: 100%;
+    }
+
+    .footer-logo {
+        order:1;
+    }
+
+    .social-links {
+        order:2;
+    }
+}
+
+/* для экрана 480px */
+@media (max-width: 480px) {
+
+    .button-text {
+       display:none; 
+    }
+    .button {
+        min-height: 40px;
+        min-width: 40px;
+    }
+    .button-icon {
+        margin: 0;
+    }
+    
+    .promo {
+    padding: 20px;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        flex-direction: column;       
+        align-items:center;
+    }
+    .footer-logo {
+        order:0;
+        margin-bottom: 20px;
+    }
+    .footer-links {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 20px;
+        flex-direction: column;
+        align-items:center;     
+    }
+    .footer-link:not(:last-child) {
+        margin-right: 0;
+    }
+    .social-links {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+/*******************************************Адаптив под разные устройства end********************************************/
+
+/* Селектор {
+    свойство: значение;
+} 
+*/
